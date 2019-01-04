@@ -31,7 +31,7 @@ In this case, I wanted a web application that would quickly tell me how much rai
 
 First, I needed to find a localized data source for historical rainfall. There are a number of spatial- and time-averaged data sets from commercial weather sites. However, I came across real-time data from the [LCRA Hydromet](https://hydromet.lcra.org/) that includes streamflow, lake levels, rainfall amounts, temperature, and relative humidity based on hundreds of sensors. The Hydromet site even provides a nice interactive map that shows this data.
 
-![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-1.png)
+<img src="/blog/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-1.png" alt="" width="100%"/>
 
 However, I wanted a minimal application that showed me data most relevant to my immediate area without having to filter and zoom on the map each time.
 
@@ -139,7 +139,7 @@ docker run -d -p 5000:5000 rainfall-app:1.0
 
 And access the application in our browser:
 
-![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-2.png)
+<img src="/blog/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-2.png" alt="" width="100%"/>
 
 Nice! We have the application containerized and running locally on our machine. Time to deploy it out into the world on a Kubernetes cluster.
 
@@ -258,7 +258,7 @@ That's it!
 
 After the nodes pull the rainfall totals application and the load balancer is up and running, I can view the application by pointing my browser to http://apps.koverholt.com/rainfall/:
 
-![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-3.png)
+<img src="/blog/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-3.png" alt="" width="100%"/>
 
 ## Summary
 
