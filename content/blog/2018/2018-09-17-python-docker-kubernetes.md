@@ -31,7 +31,7 @@ In this case, I wanted a web application that would quickly tell me how much rai
 
 First, I needed to find a localized data source for historical rainfall. There are a number of spatial- and time-averaged data sets from commercial weather sites. However, I came across real-time data from the [LCRA Hydromet][https://hydromet.lcra.org/] that includes streamflow, lake levels, rainfall amounts, temperature, and relative humidity based on hundreds of sensors. The Hydromet site even provides a nice interactive map that shows this data.
 
-<img class="aligncenter size-large wp-image-2659" src="https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-1024x899.png" alt="" width="605" height="531" srcset="https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-1024x899.png 1024w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-300x263.png 300w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-768x674.png 768w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-100x88.png 100w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-150x132.png 150w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-200x176.png 200w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-450x395.png 450w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-600x527.png 600w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.40.12-PM-900x790.png 900w" sizes="(max-width: 605px) 100vw, 605px" />
+![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-1.png)
 
 However, I wanted a minimal application that showed me data most relevant to my immediate area without having to filter and zoom on the map each time.
 
@@ -63,15 +63,10 @@ Then I created another script that serves a frontend using Flask templated with 
 
 <pre class="brush: python; title: ; notranslate" title="">#!/usr/bin/env python
 
-
 from flask import Flask, jsonify, request, render_template
 from rainfall import get_stations, rainfall_total
 
-
 app = Flask(__name__)
-
-
-
 
 @app.route('/', defaults={'path': ''})
 @app.route("/<path:path>")
@@ -146,7 +141,7 @@ docker run -d -p 5000:5000 rainfall-app:1.0
 
 And access the application in our browser:
 
-<img class="aligncenter size-large wp-image-2647" src="https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-1024x711.png" alt="" width="605" height="420" srcset="https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-1024x711.png 1024w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-300x208.png 300w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-768x533.png 768w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-100x69.png 100w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-150x104.png 150w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-200x139.png 200w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-450x312.png 450w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-600x416.png 600w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM-900x625.png 900w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.16.50-PM.png 1516w" sizes="(max-width: 605px) 100vw, 605px" />
+![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-2.png)
 
 Nice! We have the application containerized and running locally on our machine. Time to deploy it out into the world on a Kubernetes cluster.
 
@@ -260,7 +255,7 @@ That's it!
 
 After the nodes pull the rainfall totals application and the load balancer is up and running, I can view the application by pointing my browser to <http://apps.koverholt.com/rainfall/>:
 
-<img class="aligncenter size-large wp-image-2649" src="https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-1024x661.png" alt="" width="605" height="391" srcset="https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-1024x661.png 1024w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-300x194.png 300w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-768x496.png 768w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-100x65.png 100w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-150x97.png 150w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-200x129.png 200w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-450x291.png 450w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-600x387.png 600w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM-900x581.png 900w, https://www.koverholt.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-11.29.21-PM.png 1580w" sizes="(max-width: 605px) 100vw, 605px" />
+![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-3.png)
 
 ## Summary
 
