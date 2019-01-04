@@ -3,7 +3,9 @@ title: "About"
 date: "2016-05-05T21:48:51-07:00"
 ---
 
-I am a solutions engineer at [RStudio](https://www.rstudio.com).
+I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
+enterprise data science products and operational data science workflows. A proud
+Texan and fan of R, Python, and DevOps.
 
 <!-- I am fascinated by scientific software development, scientific computing, data analysis, and visualization. I love most to read, write, and teach. I am an engineer who works with a progressive mind for development, science, learning, and new experiences. -->
 
