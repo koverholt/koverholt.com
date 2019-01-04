@@ -37,7 +37,8 @@ However, I wanted a minimal application that showed me data most relevant to my 
 
 After locating the tabular and CSV versions of the relevant weather data on the [LCRA Hydromet media page][https://hydromet.lcra.org/media], I created a script to obtain the latest data and parse it using pandas:
 
-<pre class="brush: python; title: ; notranslate" title="">#!/usr/bin/env python
+```
+#!/usr/bin/env python
 
 import pandas as pd
 from collections import OrderedDict
@@ -57,11 +58,12 @@ def fetch_data():
     rainfall = rainfall_one_day.join(rainfall_five_day, rsuffix='2')
     stations = pd.Series(rainfall.location.values, index=rainfall.index).to_dict(into=OrderedDict)
     return rainfall, stations
-</pre>
+```
 
 Then I created another script that serves a frontend using Flask templated with Bootstrap, and the script accepts POST requests with inputs for the sensor site location and duration of rainfall desired:
 
-<pre class="brush: python; title: ; notranslate" title="">#!/usr/bin/env python
+```
+#!/usr/bin/env python
 
 from flask import Flask, jsonify, request, render_template
 from rainfall import get_stations, rainfall_total
@@ -81,9 +83,6 @@ def rainfall(path):
                            selected_station=selected_station,
                            error=error)
 
-
-
-
 @app.route('/', defaults={'path': ''})
 @app.route("/<path:path>", methods=['POST'])
 def rainfall_post(path):
@@ -101,12 +100,9 @@ def rainfall_post(path):
                            selected_station=selected_station,
                            error=error);
 
-
-
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
-</pre>
+```
 
 The result is this rainfall-totals Python application:
 
@@ -118,7 +114,8 @@ Now, we can move on to containerizing our Python application in a Docker image.
 
 For this step, we can start with a base image (Debian 7, in this case), install Python dependencies (pandas and flask), copy in our Python application source code, expose the web server (port 5000), then start the Flask application.
 
-<pre class="brush: plain; title: ; notranslate" title="">from debian:7
+```
+from debian:7
 
 RUN apt-get update && apt-get install -y curl bzip2
 
@@ -131,13 +128,14 @@ RUN /opt/anaconda/bin/conda install -y pandas=0.23.4 flask=1.0.2 nomkl
 copy . /
 EXPOSE 5000
 CMD /opt/anaconda/bin/python /app.py
-</pre>
+```
 
 We can build and run the Docker container using:
 
-<pre class="brush: bash; title: ; notranslate" title="">docker build -t rainfall-app:1.0 .
+```
+docker build -t rainfall-app:1.0 .
 docker run -d -p 5000:5000 rainfall-app:1.0
-</pre>
+```
 
 And access the application in our browser:
 
@@ -153,7 +151,8 @@ First, I used the Google Cloud Shell to clone the rainfall totals application re
 
 Then, I created a Kubernetes deployment to run three replicas of the rainfall totals application:
 
-<pre class="brush: plain; title: ; notranslate" title="">apiVersion: apps/v1
+```
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rainfall-app
@@ -172,11 +171,12 @@ spec:
         image: gcr.io/koverholt-apps/rainfall:1.4
         ports:
         - containerPort: 5000
-</pre>
+```
 
 And a Kubernetes Service to expose the service on a NodePort:
 
-<pre class="brush: plain; title: ; notranslate" title="">apiVersion: v1
+```
+apiVersion: v1
 kind: Service
 metadata:
   name: rainfall-service
@@ -190,11 +190,12 @@ spec:
   type: NodePort
   selector:
     run: rainfall-app
-</pre>
+```
 
 Finally, I created a Kubernetes Ingress resource to route various paths to specific services/applications. This will be useful for deploying additional applications in the future:
 
-<pre class="brush: plain; title: ; notranslate" title="">apiVersion: extensions/v1beta1
+```
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: ingress
@@ -212,7 +213,7 @@ spec:
         backend:
           serviceName: rainfall-service
           servicePort: 5000
-</pre>
+```
 
 All of the Kubernetes resources live in the following GitHub repository:
 
@@ -220,12 +221,14 @@ All of the Kubernetes resources live in the following GitHub repository:
 
 With all of these resources created, I can deploy the application, service, and ingress/load balancer to the Kubernetes cluster on GKE, either from my local machine, or using Google Cloud Shell:
 
-<pre class="brush: bash; title: ; notranslate" title="">kubectl apply -f .
-</pre>
+```
+kubectl apply -f .
+```
 
 I can view all of the Kubernetes resources on my cluster to confirm that things are up and running:
 
-<pre class="brush: bash; title: ; notranslate" title="">$ kubectl get all
+```
+$ kubectl get all
 NAME                  DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 deploy/default-app    2         2         2            2           13d
 deploy/rainfall-app   3         3         3            3           13d
@@ -245,7 +248,7 @@ NAME                   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        
 svc/default-service    NodePort    10.43.243.28    <none>        8080:30289/TCP   13d
 svc/kubernetes         ClusterIP   10.43.240.1     <none>        443/TCP          13d
 svc/rainfall-service   NodePort    10.43.255.248   <none>        5000:30210/TCP   13d
-</pre>
+```
 
 Looks good! The deployment, replicaset, service, and three replicate pods running for the rainfall application, a default application to serve on the bare route, and the load balancer are all up and running.
 
