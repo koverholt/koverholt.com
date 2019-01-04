@@ -5,9 +5,9 @@ date: "2018-09-17T04:48:16+00:00"
 
 ## Running Python Applications Directly on Web Servers
 
-In the past, I've created a number of Python applications and configured/deployed them as web applications using WSGI and the Apache webserver. I did this for engineering calculators on my website, the [Is Texas On Fire?][http://istexasonfire.com/] website/map, calculators that used compiled Fortran fire models ([CFAST][https://github.com/firemodels/cfast] and [FDS][https://github.com/firemodels/fds]), and many other tools/experiments.
+In the past, I've created a number of Python applications and configured/deployed them as web applications using WSGI and the Apache webserver. I did this for engineering calculators on my website, the [Is Texas On Fire?](http://istexasonfire.com/) website/map, calculators that used compiled Fortran fire models ([CFAST](https://github.com/firemodels/cfast) and [FDS](https://github.com/firemodels/fds)), and many other tools/experiments.
 
-Traditionally, I would version control my code on GitHub, clone the latest version on the web server machines, obtain the appropriate system/Python libraries, configure and restart Apache, and things ran fairly smoothly. For this reason, I gravitated towards flexible webhosts such as [NearlyFreeSpeech.net][https://www.nearlyfreespeech.net/] and [WebFaction][https://www.webfaction.com/] that provided a compilation toolchain and allowed you to freely run executables via WSGI without needing to open a support ticket for each action.
+Traditionally, I would version control my code on GitHub, clone the latest version on the web server machines, obtain the appropriate system/Python libraries, configure and restart Apache, and things ran fairly smoothly. For this reason, I gravitated towards flexible webhosts such as [NearlyFreeSpeech.net](https://www.nearlyfreespeech.net/) and [WebFaction](https://www.webfaction.com/) that provided a compilation toolchain and allowed you to freely run executables via WSGI without needing to open a support ticket for each action.
 
 This method of deploying Python apps made sense to me after years of running websites and applications on tools such as WordPress, which used server-side execution, shared-hosting machines, and system libraries at runtime. And it worked, so I stuck with it for a long time.
 
@@ -29,13 +29,13 @@ This part is pretty familiar: formulate and solve a problem by writing some back
 
 In this case, I wanted a web application that would quickly tell me how much rainfall has occurred in my home area in Central Texas, especially since rainfall in the summer of 2018 has been pretty scarce (up until two weeks ago, at least).
 
-First, I needed to find a localized data source for historical rainfall. There are a number of spatial- and time-averaged data sets from commercial weather sites. However, I came across real-time data from the [LCRA Hydromet][https://hydromet.lcra.org/] that includes streamflow, lake levels, rainfall amounts, temperature, and relative humidity based on hundreds of sensors. The Hydromet site even provides a nice interactive map that shows this data.
+First, I needed to find a localized data source for historical rainfall. There are a number of spatial- and time-averaged data sets from commercial weather sites. However, I came across real-time data from the [LCRA Hydromet](https://hydromet.lcra.org/) that includes streamflow, lake levels, rainfall amounts, temperature, and relative humidity based on hundreds of sensors. The Hydromet site even provides a nice interactive map that shows this data.
 
 ![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-1.png)
 
 However, I wanted a minimal application that showed me data most relevant to my immediate area without having to filter and zoom on the map each time.
 
-After locating the tabular and CSV versions of the relevant weather data on the [LCRA Hydromet media page][https://hydromet.lcra.org/media], I created a script to obtain the latest data and parse it using pandas:
+After locating the tabular and CSV versions of the relevant weather data on the [LCRA Hydromet media page](https://hydromet.lcra.org/media), I created a script to obtain the latest data and parse it using pandas:
 
 ```
 #!/usr/bin/env python
@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
 The result is this rainfall-totals Python application:
 
-<https://github.com/koverholt/rainfall-totals>
+https://github.com/koverholt/rainfall-totals
 
 Now, we can move on to containerizing our Python application in a Docker image.
 
@@ -217,7 +217,7 @@ spec:
 
 All of the Kubernetes resources live in the following GitHub repository:
 
-<https://github.com/koverholt/koverholt-apps>
+https://github.com/koverholt/koverholt-apps
 
 With all of these resources created, I can deploy the application, service, and ingress/load balancer to the Kubernetes cluster on GKE, either from my local machine, or using Google Cloud Shell:
 
@@ -256,7 +256,7 @@ And finally, I configured a static IP address for the load balancer and a DNS A 
 
 That's it!
 
-After the nodes pull the rainfall totals application and the load balancer is up and running, I can view the application by pointing my browser to <http://apps.koverholt.com/rainfall/>:
+After the nodes pull the rainfall totals application and the load balancer is up and running, I can view the application by pointing my browser to http://apps.koverholt.com/rainfall/:
 
 ![](/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-3.png)
 
