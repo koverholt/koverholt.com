@@ -1,6 +1,6 @@
 ---
-title: "A Plain Markdown Post"
-date: "2019-01-03T23:00:00-06:00"
+title: "How to Develop and Deploy a Python Application with Docker and Kubernetes"
+date: "2018-09-17T04:48:16+00:00"
 ---
 
 ## Running Python Applications Directly on Web Servers
