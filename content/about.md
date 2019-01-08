@@ -7,6 +7,33 @@ I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
 enterprise data science products and operational data science workflows. A proud
 Texan and fan of R, Python, and DevOps.
 
+Interests
+
+* Integrating Python with Hadoop and Spark in cluster computing environments
+* Solution architecting for cluster computing and data analysis/engineering workflows
+
+Resume:
+[View my current resume](Overholt-Resume.pdf)
+
+[Email](mailto:kris@koverholt.com)
+
+[Github](https://github.com/koverholt)
+
+[LinkedIn](http://www.linkedin.com/in/koverholt)
+
+[Twitter](http://www.twitter.com/koverholt)
+
+<!-- * Computational modeling/simulation of thermal/fluid systems -->
+<!-- * Verification and validation of computational models -->
+<!-- * Scientific, distributed, and high-performance computing -->
+<!-- * Continuous integration testing and quality metrics in computational models -->
+<!-- * Bayesian inference for statistical parameter uncertainty quantification -->
+<!-- * Performance-based design in engineering -->
+<!-- * Soot deposition and aerosol transport in fires -->
+<!-- * Computational models in forensic and reconstruction applications -->
+<!-- * Inverse modeling problems -->
+<!-- * Wildland-urban interface fires: experiments and modeling -->
+
 <!-- I am fascinated by scientific software development, scientific computing, data analysis, and visualization. I love most to read, write, and teach. I am an engineer who works with a progressive mind for development, science, learning, and new experiences. -->
 
 <!-- This is my website/blog that I first created for my summer internship in Gaithersburg, Maryland, at the National Institute of Standards and Technology in 2007. It continues to grow with content related to my studies, life, and passions in everyday explorations. -->
