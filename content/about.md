@@ -7,10 +7,10 @@ I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
 enterprise data science products and operational data science workflows. A proud
 Texan and fan of R, Python, and DevOps.
 
-Interests
+<!-- Interests -->
 
-* Integrating Python with Hadoop and Spark in cluster computing environments
-* Solution architecting for cluster computing and data analysis/engineering workflows
+<!-- * Integrating Python with Hadoop and Spark in cluster computing environments -->
+<!-- * Solution architecting for cluster computing and data analysis/engineering workflows -->
 
 Resume:
 [View my current resume](Overholt-Resume.pdf)
