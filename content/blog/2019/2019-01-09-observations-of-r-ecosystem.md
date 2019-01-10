@@ -113,12 +113,13 @@ I've developed as I learn are:
 * https://rainfall.koverholt.com - Rainfall totals for central Texas
 
 In a previous blog post about [developing and deploying applications with
-Python, Docker, and Kubernetes](/blog/2018/2018-09-17-python-docker-kubernetes),
-I described the data science application development and deployment approach
-that I have been using for the past few years. Now, just shortly after writing
-that blog post, I have quickly fallen in love with a new and very low-friction
-approach for developing and deploying data science applications, and Shiny is at
-the center of that pipeline.
+Python, Flask, Docker, and
+Kubernetes](/blog/2018/2018-09-17-python-docker-kubernetes), I described the
+data science application development and deployment approach that I have been
+using for the past few years. Now, just shortly after writing that blog post, I
+have quickly fallen in love with a new and very low-friction approach for
+developing and deploying data science applications, and Shiny is at the center
+of that pipeline.
 
 Off the top of my head, the history of how I've developed and shared engineering
 and data science "applications" from the early 2000s to the present day looks
@@ -152,21 +153,20 @@ beautiful documents mixed with R code snippets, notebooks, visualizations, and
 more in a wide range of formats.
 
 I've always been a fan of Markdown, but my use of it was limited to
-documentation and Github comments. Before Markdown, I was a heavy user of LaTeX
-and wrote a number of large documents using it, including my dissertation. I
-always appreciated the beautiful typesetting and output formats provided by
-LaTeX, but the toolchain to write and render documents is quite dated and
-cumbersome.
+documentation and Github comments. Before Markdown, I was a heavy user of
+[LaTeX](https://www.latex-project.org/) and wrote a number of large documents
+using it, including my dissertation. I always appreciated the beautiful
+typesetting and output formats provided by LaTeX, but the toolchain to write and
+render documents is quite dated and cumbersome.
 
-I also used Jupyter Notebooks (and its predecessor IPython) for interactive work
-in Python, but I never really liked Jupyter Notebooks beyond a very specific use
-case of intial, interactive prototyping. I can relate to many of the
-frustrations in [this
-talk](https://conferences.oreilly.com/jupyter/jup-ny/public/schedule/detail/68282).
-I always felt like Jupyter Notebooks were not too useful for me beyond the
-initial prototyping phase, and I have talked to many users who didn't really
-know what the next step was in terms of making their code useful for others
-beyond writing it in a notebook.
+I also used [Jupyter Notebooks](https://jupyter.org/) (and its predecessor
+[IPython](https://ipython.org/)) for interactive work in Python, but I typically
+only used them for a very specific use case of initial, interactive prototyping.
+Beyond writing my code it in a notebook and adding descriptive text, I never
+really knew what the next step was to make my code useful for others in terms of
+publishing, API development, app development, testing, etc. Whereas with my code
+in R Markdown and Shiny apps, I can generate and share output in the form of a
+familiar static document or interactive app for others to read and use.
 
 So, when I discovered what R Markdown was really about, I was immediately drawn
 to it as a perfect medium for code, communication, presentation, and reports,
@@ -177,10 +177,9 @@ Markdown, R, LaTeX, and the ability to publish documents in a wide range of
 formats.
 
 Within a short period of time, I moved my websites (including this one) that
-from a self-hosted Wordpress (that I've had for about 10 years) to a static
-website host with the source content stored in Github. This site is built with
-[Blogdown](https://bookdown.org/yihui/blogdown/), Hugo, R Markdown and hosted on
-Netlify.
+from a self-hosted Wordpress setup (that I've had for about 10 years) to a
+static website host with the source content stored in Github. This site is built
+with [Blogdown](https://bookdown.org/yihui/blogdown/), Hugo, and R Markdown.
 
 It feels great to focus on the content in plain text again as opposed to
 fighting with formats and plugins via a heavy frontend as well as dealing with
@@ -220,6 +219,10 @@ https://community.rstudio.com/ - This is a great center of activity for all
 questions and discussions related to R. I was also happy to see categories such
 as R Admins and Events that go beyond the mechanics of the language and deal
 with issues related to infrastructure, best practices, and community events.
+
+https://www.r-bloggers.com/ - A very active aggregation of blog posts from 750 R
+users. I currently read this every day as a way to see what the world is doing
+in R, what libraries they are using, and how they are writing about it.
 
 ## The Future
 
