@@ -1,6 +1,6 @@
 ---
 title: "How to Develop and Deploy a Python Application with Docker and Kubernetes"
-date: "2018-09-17T04:48:16+00:00"
+date: "2018-09-17"
 ---
 
 ## Running Python Applications Directly on Web Servers
