@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: "2016-05-05T21:48:51-07:00"
 ---
 
 I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
