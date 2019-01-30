@@ -11,8 +11,7 @@ Texan and fan of R, Python, and DevOps.
 <!-- * Integrating Python with Hadoop and Spark in cluster computing environments -->
 <!-- * Solution architecting for cluster computing and data analysis/engineering workflows -->
 
-Resume:
-[View my current resume](Overholt-Resume.pdf)
+[Resume](Overholt-Resume.pdf)
 
 [Email](mailto:kris@koverholt.com)
 
