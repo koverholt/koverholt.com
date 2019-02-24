@@ -256,7 +256,7 @@ And finally, I configured a static IP address for the load balancer and a DNS A 
 
 That's it!
 
-After the nodes pull the rainfall totals application and the load balancer is up and running, I can view the application by pointing my browser to http://apps.koverholt.com/rainfall/:
+After the nodes pull the rainfall totals application and the load balancer is up and running, I can view the application by pointing my browser to <https://rainfall.koverholt.com>:
 
 <img src="/blog/2018/2018-09-17-python-docker-kubernetes_files/rainfall-totals-3.png" alt="" width="100%"/>
 
