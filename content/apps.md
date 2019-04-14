@@ -2,6 +2,8 @@
 title: "Apps"
 ---
 
+## Interactive Applications
+
 [Weather Dashboard](https://weather.koverholt.com)
 
 [Central Texas Rainfall Totals](https://rainfall.koverholt.com)
@@ -11,3 +13,7 @@ title: "Apps"
 [Popular Names](https://names.koverholt.com)
 
 [Austin Fire Incidents](https://austin-fires.koverholt.com)
+
+## Reports
+
+[Central Texas Rainfall Report](https://rainfall-report.koverholt.com)
