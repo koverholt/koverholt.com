@@ -3,12 +3,15 @@
 {{ .Hugo.Generator }}
 
 {{ if eq .URL "/" }}
-<title>{{ .Site.Title }}</title>
-<meta property="og:title" content="{{ .Site.Title }}">
+<title>{{ .Title }}</title>
+<meta property="og:title" content="{{ .Title }}">
 <meta property="og:type" content="website">
 {{ else }}
-<title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
+<title>{{ .Title }} - {{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+{{ end }}
+{{ with .Site.Params.favicon }}
+  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
 {{ end }}
 
 {{ if eq .URL "/" }}
@@ -24,12 +27,9 @@
 {{ end }}
 
 {{ if .RSSLink }}
-<link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
-{{ partial "head_highlightjs" . }}
-<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="all">
-<link rel="stylesheet" href="{{ "css/main.css" | relURL }}" media="all">
-{{ range .Site.Params.customCSS }}
-<link rel="stylesheet" href="{{ . | relURL }}">
-{{ end }}
-{{ partial "head_custom" . }}
+
+<link rel="icon" href="{{ .Site.BaseURL }}images/{{ .Site.Params.icon.url }}" type="image/x-icon"/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
