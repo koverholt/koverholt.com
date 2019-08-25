@@ -1,5 +1,6 @@
 ---
 title: "Kristopher Overholt"
+type: index
 ---
 
 I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
