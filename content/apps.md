@@ -1,7 +1,6 @@
-+++
+---
 title: "Apps"
-
-+++
+---
 
 ## Interactive Applications
 
