@@ -1,6 +1,6 @@
----
-title: "Home"
----
++++
+title: "Kristopher Overholt"
++++
 
 I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
 enterprise data science products and operational data science workflows. A proud
