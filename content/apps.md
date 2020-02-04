@@ -8,7 +8,7 @@ title: "Apps"
 
 [Central Texas Rainfall Totals](https://rainfall.koverholt.com)
 
-[Texas Fire Map](https://www.istexasonfire.com)
+[Texas Fire Map](http://www.istexasonfire.com)
 
 [Popular Names](https://names.koverholt.com)
 
