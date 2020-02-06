@@ -8,8 +8,6 @@ Texan and fan of R, Python, and DevOps.
 
 [Resume](Overholt-Resume.pdf)
 
-[Email](mailto:kris@koverholt.com)
-
 [Github](https://github.com/koverholt)
 
 [LinkedIn](http://www.linkedin.com/in/koverholt)
