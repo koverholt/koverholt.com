@@ -4,12 +4,12 @@ title: "Apps"
 
 ## Interactive Applications
 
-[Weather Dashboard](https://weather.koverholt.com)
+[Weather Dashboard](https://apps.koverholt.com/weather-dashboard)
 
-[Central Texas Rainfall Totals](https://rainfall.koverholt.com)
+[Central Texas Rainfall Totals](https://apps.koverholt.com/rainfall-totals)
 
 [Texas Fire Map](http://www.istexasonfire.com)
 
-[Popular Names](https://names.koverholt.com)
+[Popular Names](https://apps.koverholt.com/popular-names)
 
-[Austin Fire Incidents](https://austin-fires.koverholt.com)
+[Austin Fire Incidents](https://apps.koverholt.com/austin-fire-indicents)
