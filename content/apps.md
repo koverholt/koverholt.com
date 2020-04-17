@@ -10,4 +10,4 @@ title: "Apps"
 
 [Popular Names](https://apps.koverholt.com/popular-names)
 
-[Austin Fire Incidents](https://apps.koverholt.com/austin-fire-indicents)
+[Austin Fire Incidents](https://apps.koverholt.com/austin-fire-incidents)
