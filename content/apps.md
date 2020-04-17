@@ -2,8 +2,6 @@
 title: "Apps"
 ---
 
-## Interactive Applications
-
 [Weather Dashboard](https://apps.koverholt.com/weather-dashboard)
 
 [Central Texas Rainfall Totals](https://apps.koverholt.com/rainfall-totals)
