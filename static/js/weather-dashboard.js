@@ -28,6 +28,7 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
     console.log(output.result);
     var obj = output.result;
     var current_temperature = obj["current_temperature"];
+    var current_apparent_temperature = obj["current_apparent_temperature"];
     var current_humidity = obj["current_humidity"];
     var current_wind_speed = obj["current_wind_speed"];
 
@@ -35,6 +36,7 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
       el: '#app',
       data: {
         current_temperature: current_temperature,
+        current_apparent_temperature: current_apparent_temperature,
         current_humidity: current_humidity,
         current_wind_speed: current_wind_speed,
       }
