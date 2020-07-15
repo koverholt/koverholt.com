@@ -2,12 +2,6 @@
 title: "Central Texas Rainfall Totals"
 ---
 
-<script src="https://algorithmia.com/v1/clients/js/algorithmia-0.2.1.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/rainfall-totals.css">
 
 <figure class="highcharts-figure">
