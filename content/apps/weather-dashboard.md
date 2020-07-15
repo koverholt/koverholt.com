@@ -7,18 +7,18 @@ title: "Weather Dashboard"
 
 <nav class="navbar navbar-dark bg-dark">
   <!-- Non-mobile screens -->
-  <a class="navbar-brand text-truncate d-none d-sm-block" href="{{ url_for('index') }}">
+  <a class="navbar-brand text-truncate d-none d-sm-block" href="/apps/weather-dashboard/">
     <i class="fas fa-cloud-sun"></i>
     Weather Dashboard
   </a>
   <!-- Mobile screens -->
-  <a class="navbar-brand d-block d-sm-none" href="{{ url_for('index') }}">
+  <a class="navbar-brand d-block d-sm-none" href="/apps/weather-dashboard/">
     <i class="fas fa-cloud-sun"></i>
     Weather Dashboard
     <br />
   </a>
   <div class="form-inline">
-    <form class="my-2 my-lg-0" action="{{ url_for('index') }}" method="GET">
+    <form class="my-2 my-lg-0" action="/apps/weather-dashboard/" method="GET">
       <input class="form-control mr-sm-2" type="search" id="location" name="location" placeholder="Location" aria-label="Search">
       <button class="btn btn-outline-light my-2 my-sm-0 mr-2" type="submit">Go</button>
         <button class="btn btn-outline-light my-2 my-sm-0" onclick="getLocation();" type="button">
