@@ -34,14 +34,12 @@ var param = new Vue({
 */
 
 var input_location = window.value || "Austin, TX"
-console.log(input_location);
 
 var input = {"location": input_location};
 Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
   .algo("koverholt/weather_dashboard/0.1.0?timeout=300")
   .pipe(input)
   .then(function(output) {
-    console.log(output.result);
     var obj = output.result;
     var current_temperature = obj["current_temperature"];
     var current_apparent_temperature = obj["current_apparent_temperature"];
