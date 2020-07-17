@@ -6,7 +6,6 @@ Algorithmia.client("sim/K4CBh725TCpkNX1jsyT/Evw1")
     var obj = output.result;
     var event_counts = obj["event_counts"];
     var fetch_date = obj["fetch_date"];
-    console.log(event_counts);
 
   var app = new Vue({
     el: '#app',
