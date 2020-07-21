@@ -16,7 +16,6 @@ Algorithmia.client("simSSc1M+5bDh1CtJ/qnBs0SBba1")
       var rowsFiltered = obj.filter(function(row) {
           return (row.Problem === classes);
       });
-      console.log(rowsFiltered, 'Latitude');
       return {
          type: 'scattermapbox',
          name: classes,
