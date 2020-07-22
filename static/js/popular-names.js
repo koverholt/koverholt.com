@@ -56,8 +56,19 @@ Algorithmia.client("simlkeLskhCPWY3nI+xq75thdMy1")
 
   var data = [trace1, trace2];
 
-  var layout = {barmode: "stack"};
+  var layout = {
+    barmode: "stack",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    paper_bgcolor: "rgba(51,51,51,0)",
+    font: {
+      color: "white",
+    }
+  };
 
-  Plotly.newPlot("chart", data, layout);
+  var config = {
+    'displayModeBar': false
+  };
+
+  Plotly.newPlot("chart", data, layout, config);
 
 });
