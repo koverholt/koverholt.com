@@ -5,30 +5,33 @@ title: "Weather Dashboard"
 <link rel="stylesheet" type="text/css" href="/css/weather-dashboard.css">
 <script src="/js/weather-dashboard.js"></script>
 
-<nav class="navbar navbar-dark bg-dark">
-  <!-- Non-mobile screens -->
-  <a class="navbar-brand text-truncate d-none d-sm-block" href="/apps/weather-dashboard/">
-    <i class="fas fa-cloud-sun"></i>
-    Weather Dashboard
-  </a>
-  <!-- Mobile screens -->
-  <a class="navbar-brand d-block d-sm-none" href="/apps/weather-dashboard/">
-    <i class="fas fa-cloud-sun"></i>
-    Weather Dashboard
-    <br />
-  </a>
-  <div class="form-inline">
-    <form class="my-2 my-lg-0" action="/apps/weather-dashboard/" method="GET">
-      <input class="form-control mr-sm-2" type="search" id="location" name="location" placeholder="Location" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0 mr-2" type="submit">Go</button>
-        <button class="btn btn-outline-light my-2 my-sm-0" onclick="getLocation();" type="button">
-          <i class="fas fa-location-arrow"></i>
-        </button>
-    </form>
-  </div>
-</nav>
-
 <div class="container" id="app">
+
+  <nav class="navbar navbar-dark bg-dark">
+    <!-- Non-mobile screens -->
+    <a class="navbar-brand text-truncate d-none d-sm-block" href="/apps/weather-dashboard/">
+      <i class="fas fa-cloud-sun"></i>
+      Weather Dashboard - {{ village || town || city || county }}, {{ state || country }}
+    </a>
+    <!-- Mobile screens -->
+    <a class="navbar-brand d-block d-sm-none" href="/apps/weather-dashboard/">
+      <i class="fas fa-cloud-sun"></i>
+      Weather Dashboard
+      <br />
+      {{ village || town || city || county }}, {{ state || country }}
+    </a>
+    <div class="form-inline">
+      <form class="my-2 my-lg-0" action="/apps/weather-dashboard/" method="GET">
+        <input class="form-control mr-sm-2" type="search" id="location" name="location" placeholder="Location" aria-label="Search">
+        <button class="btn btn-md btn-outline-light my-2 my-sm-0 mr-2" type="submit">
+          &thinsp;Go&thinsp;
+        </button>
+        <button class="btn btn-md btn-outline-light my-2 my-sm-0" onclick="getLocation();" type="button">
+          &thinsp;<i class="fas fa-location-arrow"></i>&thinsp;
+        </button>
+      </form>
+    </div>
+  </nav>
 
   <div class="row">
     &nbsp;
@@ -87,8 +90,12 @@ title: "Weather Dashboard"
     </div>
   </div>
 
-  <!-- <div class="row">
+  <div class="row">
+    &nbsp;
+  </div>
+
+  <div class="row">
     <div id="container" style="width:100%; height:70vh"></div>
-  </div> -->
+  </div>
 
 </div>
