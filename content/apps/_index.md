@@ -8,6 +8,6 @@ title: "Apps"
 
 [Texas Fire Map](http://www.istexasonfire.com)
 
-[Popular Names](/apps/popular-names)
+[Name Popularity](/apps/name-popularity)
 
 [Austin Fire Incidents](/apps/austin-fire-incidents/)

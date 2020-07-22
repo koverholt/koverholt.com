@@ -20,6 +20,7 @@ unsafe= true
 
 [params]
     description = "Kristopher Overholt"
+    favicon = "images/favicon.ico"
 
     [params.logo]
     url = "logo.png"
