@@ -5,7 +5,7 @@ title: "Weather Dashboard"
 <link rel="stylesheet" type="text/css" href="/css/weather-dashboard.css">
 <script src="/js/weather-dashboard.js"></script>
 
-<div class="container" id="app">
+<div class="container" id="app" v-cloak>
 
   <nav class="navbar navbar-dark bg-dark">
     <!-- Non-mobile screens -->
