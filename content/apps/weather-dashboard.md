@@ -38,7 +38,7 @@ title: "Weather Dashboard"
   </div>
 
   <!-- Non-mobile screens -->
-  <div class="row d-none d-sm-block" v-cloak>
+  <div class="row d-none d-sm-block">
     <div class="container">
       <div class="row">
         <div class="col text-center text-white bg-danger rounded m-1 p-3">
@@ -63,7 +63,7 @@ title: "Weather Dashboard"
   </div>
 
   <!-- Mobile screens -->
-  <div class="row d-block d-sm-none" v-cloak>
+  <div class="row d-block d-sm-none">
     <div class="container">
       <div class="row">
         <div class="col text-center text-white bg-danger rounded m-1 p-3">
