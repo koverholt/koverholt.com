@@ -1,6 +1,6 @@
 var input = {"site": 2959};
 Algorithmia.client("simNv7chjBG6IS1nPZ9ocby/kEw1")
-  .algo("koverholt/rainfall_totals/0.4.0?timeout=300")
+  .algo("koverholt/rainfall_totals/1.0.0?timeout=300")
   .pipe(input)
   .then(function(output) {
     var obj = JSON.parse(output.result)
