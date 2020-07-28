@@ -2,9 +2,9 @@
 title: "Kristopher Overholt"
 ---
 
-I am a solutions engineer at [RStudio](https://www.rstudio.com) who works with
-enterprise data science products and operational data science workflows. A proud
-Texan and fan of R, Python, and DevOps.
+I am a sales and solutions engineer who works with enterprise data science
+products and operational data science workflows. A proud Texan and fan of Python
+and DevOps.
 
 [Resume](Overholt-Resume.pdf)
 
