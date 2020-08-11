@@ -14,10 +14,10 @@ title: "Central Texas Rainfall Totals"
         <ul class="list-unstyled">
           <li>Data from <a href="https://hydromet.lcra.org/">LCRA Hydromet</a>.</li>
         </ul>
-        <div class="alert alert-warning text-center" role="alert" class="mx-auto" v-if="five_day_total === 0" v-cloak>
+        <div class="alert alert-warning text-center" role="alert" class="mx-auto" v-if="five_day_total === 0" v-cloak-hide>
           No rainfall in the past five days 😭
         </div>
-        <div id="chart" style="width: 60vw; height: 60vh;"></div>
+        <div id="chart" style="width: 60vw; height: 60vh;" v-cloak></div>
       </div>
     </div>
   </div>

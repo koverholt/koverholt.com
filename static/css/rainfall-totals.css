@@ -1,6 +1,9 @@
-[v-cloak] {
+[v-cloak-hide] {
   display: none;
 }
+
+[v-cloak] > * { display:none }
+[v-cloak]::before { content: "Loading..." }
 
 .highcharts-figure, .highcharts-data-table table {
     min-width: 310px;
