@@ -7,4 +7,4 @@ title: "Austin Fire Incidents"
 
 <h2>Austin Fire Incidents</h2>
 
-<div id="map" class="chart"></div>
+<div id="map" class="chart" v-cloak></div>
