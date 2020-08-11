@@ -2,6 +2,10 @@
  * Globals
  */
 
+ [v-cloak] {
+   display: none;
+ }
+
 /* Links */
 a,
 a:focus,

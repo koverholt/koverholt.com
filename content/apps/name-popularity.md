@@ -19,7 +19,7 @@ title: "Name Popularity"
 
   <main role="main" class="inner cover">
 
-  <div id="app">
+  <div id="app" v-cloak>
     <h4>There have been {{ formatted_name_sum }} people named {{ input_name }}</h4>
     <br>
     <h4>{{ input_name }}'s most popular year was {{ top_year }}</h4>
