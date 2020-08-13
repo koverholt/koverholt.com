@@ -72,7 +72,7 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
     var timezone = obj["timezone"];
 
     var app = new Vue({
-      el: '#app',
+      el: "#app",
       data: {
         current_temperature: current_temperature,
         current_apparent_temperature: current_apparent_temperature,
@@ -95,12 +95,43 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
       xAxis_dateTimeLabelFormats_day = "%a"
     } else {
       annotations_labels_point_y_forecast = Math.max(...daily_temperature_high)
-      annotations_labels_point_y_forecast = 100
       annotations_labels_point_y_precip = 67
       annotations_labels_text_precip_suffix = " in"
       xAxis_fontSize = "1.6em"
       xAxis_labels_x = 85
       xAxis_dateTimeLabelFormats_day = "%A"
+    }
+
+    var i;
+    var forecast_condition = {};
+    for (i = 0; i < forecast_days.length; i++) {
+      if (daily_forecast_icons[i] == "clear-day") {
+        forecast_condition[i] = "<center>Clear</center>";
+      }
+      else if (daily_forecast_icons[i] == "rain") {
+        forecast_condition[i] = "<center>Rain</center>";
+      }
+      else if (daily_forecast_icons[i] == "snow") {
+        forecast_condition[i] = "<center>Snow</center>";
+      }
+      else if (daily_forecast_icons[i] == "sleet") {
+        forecast_condition[i] = "<center>Sleet</center>";
+      }
+      else if (daily_forecast_icons[i] == "wind") {
+        forecast_condition[i] = "<center>Wind</center>";
+      }
+      else if (daily_forecast_icons[i] == "fog") {
+        forecast_condition[i] = "<center>Fog</center>";
+      }
+      else if (daily_forecast_icons[i] == "cloudy") {
+        forecast_condition[i] = "<center>Mostly Cloudy</center>";
+      }
+      else if (daily_forecast_icons[i] == "partly-cloudy-day") {
+        forecast_condition[i] = "<center>Partly Cloudy</center>";
+      }
+      else {
+        forecast_condition[i] = "<center>Clear</center>";
+      }
     }
 
     Highcharts.chart("container", {
@@ -125,61 +156,154 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                     backgroundColor: "rgba(0, 0, 0, 0.80)",
                     useHTML: true,
                 },
-                // labels: [
-                //   {% for i in range(6) %}
-                //     {
-                //     point: {
-                //         xAxis: 0,
-                //         yAxis: 0,
-                //         x: {{ forecast_days[i] }},
-                //         y: annotations_labels_point_y_forecast,
-                //     },
-                //     {% if daily_forecast_icons[i] == "clear-day" %}
-                //       text: '<center>Clear</center>',
-                //     {% elif daily_forecast_icons[i] == "rain" %}
-                //       text: '<center>Rain</center>',
-                //     {% elif daily_forecast_icons[i] == "snow" %}
-                //       text: '<center>Snow</center>',
-                //     {% elif daily_forecast_icons[i] == "sleet" %}
-                //       text: '<center>Sleet</center>',
-                //     {% elif daily_forecast_icons[i] == "wind" %}
-                //       text: '<center>Wind</center>',
-                //     {% elif daily_forecast_icons[i] == "fog" %}
-                //       text: '<center>Fog</center>',
-                //     {% elif daily_forecast_icons[i] == "cloudy" %}
-                //       text: '<center>Mostly Cloudy</center>',
-                //     {% elif daily_forecast_icons[i] == "partly-cloudy-day" %}
-                //       text: '<center>Partly Cloudy</center>',
-                //     {% else %}
-                //       text: '<center>Clear</center>',
-                //     {% endif %}
-                //     align: "left",
-                //     x: 10,
-                //     y: 0,
-                //     },
-                //   {% endfor %}
-                // ],
+                labels: [
+                    {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: forecast_days[0],
+                        y: annotations_labels_point_y_forecast,
+                    },
+                    text: forecast_condition[0],
+                    align: "left",
+                    x: 10,
+                    y: 0,
+                    },
+                    {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: forecast_days[1],
+                        y: annotations_labels_point_y_forecast,
+                    },
+                    text: forecast_condition[1],
+                    align: "left",
+                    x: 10,
+                    y: 0,
+                    },
+                    {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: forecast_days[2],
+                        y: annotations_labels_point_y_forecast,
+                    },
+                    text: forecast_condition[2],
+                    align: "left",
+                    x: 10,
+                    y: 0,
+                    },
+                    {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: forecast_days[3],
+                        y: annotations_labels_point_y_forecast,
+                    },
+                    text: forecast_condition[3],
+                    align: "left",
+                    x: 10,
+                    y: 0,
+                    },
+                    {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: forecast_days[4],
+                        y: annotations_labels_point_y_forecast,
+                    },
+                    text: forecast_condition[4],
+                    align: "left",
+                    x: 10,
+                    y: 0,
+                    },
+                    {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: forecast_days[5],
+                        y: annotations_labels_point_y_forecast,
+                    },
+                    text: forecast_condition[5],
+                    align: "left",
+                    x: 10,
+                    y: 0,
+                    },
+                ],
             }, {
                 labelOptions: {
                     shape: "rect",
                     backgroundColor: "rgba(0, 0, 0, 0.80)",
                     useHTML: true,
                 },
-                // labels: [
-                //   {% for i in range(6) %}
-                //   {
-                //     point: {
-                //         xAxis: 0,
-                //         yAxis: 1,
-                //         x: {{ forecast_days[i] }},
-                //         y: annotations_labels_point_y_precip,
-                //     },
-                //     text: "{{ daily_precip_intensity[i] }}" + annotations_labels_text_precip_suffix,
-                //     align: "left",
-                //     x: 10,
-                //   },
-                //   {% endfor %}
-                // ],
+                labels: [
+                  {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 1,
+                        x: forecast_days[0],
+                        y: annotations_labels_point_y_precip,
+                    },
+                    text: daily_precip_intensity[0] + annotations_labels_text_precip_suffix,
+                    align: "left",
+                    x: 10,
+                  },
+                  {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 1,
+                        x: forecast_days[1],
+                        y: annotations_labels_point_y_precip,
+                    },
+                    text: daily_precip_intensity[1] + annotations_labels_text_precip_suffix,
+                    align: "left",
+                    x: 10,
+                  },
+                  {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 1,
+                        x: forecast_days[2],
+                        y: annotations_labels_point_y_precip,
+                    },
+                    text: daily_precip_intensity[2] + annotations_labels_text_precip_suffix,
+                    align: "left",
+                    x: 10,
+                  },
+                  {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 1,
+                        x: forecast_days[3],
+                        y: annotations_labels_point_y_precip,
+                    },
+                    text: daily_precip_intensity[3] + annotations_labels_text_precip_suffix,
+                    align: "left",
+                    x: 10,
+                  },
+                  {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 1,
+                        x: forecast_days[4],
+                        y: annotations_labels_point_y_precip,
+                    },
+                    text: daily_precip_intensity[4] + annotations_labels_text_precip_suffix,
+                    align: "left",
+                    x: 10,
+                  },
+                  {
+                    point: {
+                        xAxis: 0,
+                        yAxis: 1,
+                        x: forecast_days[5],
+                        y: annotations_labels_point_y_precip,
+                    },
+                    text: daily_precip_intensity[5] + annotations_labels_text_precip_suffix,
+                    align: "left",
+                    x: 10,
+                  },
+                ],
             }],
             xAxis: {
                 type: "datetime",
@@ -212,13 +336,41 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                     value: current_time,
                     width: 1,
                 },
-                // {% for i in forecast_days %}
-                //   {
-                //       color: "lightgray",
-                //       value: {{ i }},
-                //       width: 2,
-                //   },
-                // {% endfor %}
+                {
+                    color: "lightgray",
+                    value: forecast_days[0],
+                    width: 2,
+                },
+                {
+                    color: "lightgray",
+                    value: forecast_days[1],
+                    width: 2,
+                },
+                {
+                    color: "lightgray",
+                    value: forecast_days[2],
+                    width: 2,
+                },
+                {
+                    color: "lightgray",
+                    value: forecast_days[3],
+                    width: 2,
+                },
+                {
+                    color: "lightgray",
+                    value: forecast_days[4],
+                    width: 2,
+                },
+                {
+                    color: "lightgray",
+                    value: forecast_days[5],
+                    width: 2,
+                },
+                {
+                    color: "lightgray",
+                    value: forecast_days[6],
+                    width: 2,
+                },
                 ],
             },
             yAxis: [{
@@ -289,6 +441,9 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                     marker: {
                         enabled: false
                     },
+                    label: {
+                      enabled: false,
+                    },
                 }, {
                     name: "High Temperature",
                     type: "line",
@@ -318,6 +473,9 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                         crop: false,
                         overflow: "allow",
                         verticalAlign: "bottom",
+                    },
+                    label: {
+                      enabled: false,
                     },
                 },
                 {
@@ -350,6 +508,9 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                         overflow: "allow",
                         verticalAlign: "top",
                     },
+                    label: {
+                      enabled: false,
+                    },
                 }, {
                     name: "Precipitation Probability",
                     type: "column",
@@ -358,6 +519,9 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                     yAxis: 1,
                     marker: {
                         enabled: false
+                    },
+                    label: {
+                      enabled: false,
                     },
                 }, {
                     name: "Humidity",
@@ -368,6 +532,9 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                     marker: {
                         enabled: false
                     },
+                    label: {
+                      enabled: false,
+                    },
                 }, {
                     name: "Cloud Cover",
                     type: "line",
@@ -377,6 +544,9 @@ Algorithmia.client("simTS7wndR7Mfcm5OGkylKw5JFt1")
                     yAxis: 2,
                     marker: {
                         enabled: false
+                    },
+                    label: {
+                      enabled: false,
                     },
                 }
             ],
