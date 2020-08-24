@@ -2,9 +2,9 @@
 title: "Kristopher Overholt"
 ---
 
-I am a sales and solution engineer at Algorithmia who works with enterprise data
-science products and operational data science workflows. A proud Texan and fan
-of Python and DevOps.
+I am a sales and solution engineer at [Algorithmia](https://algorithmia.com/)
+who works with enterprise data science products and operational data science
+workflows. A proud Texan and fan of Python and DevOps.
 
 [Resume](Overholt-Resume.pdf)
 
