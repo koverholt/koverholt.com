@@ -2,7 +2,7 @@
 title: "Apps"
 ---
 
-[Weather Dashboard](/apps/weather-dashboard)
+[Weather Dashboard](https://weather.koverholt.com)
 
 [Central Texas Rainfall Totals](/apps/rainfall-totals/)
 
