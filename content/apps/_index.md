@@ -6,8 +6,8 @@ title: "Apps"
 
 [Central Texas Rainfall Totals](/apps/rainfall-totals/)
 
-[Texas Fire Map](http://www.istexasonfire.com)
+[Texas Fire Map](https://www.istexasonfire.com)
 
-[Name Popularity](/apps/name-popularity)
+[Name Popularity](https://names.koverholt.com)
 
 [Austin Fire Incidents](/apps/austin-fire-incidents/)
