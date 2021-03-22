@@ -2,9 +2,9 @@
 title: "Kristopher Overholt"
 ---
 
-I am a sales and solution engineer at [Algorithmia](https://algorithmia.com/)
-who works with machine learning operations, enterprise architecture, and data
-science workflows. A proud Texan and fan of Python and DevOps.
+I am a senior sales engineer at [Coiled](https://coiled.io) who works with
+distributed Python, scalable data science workflows, and enterprise
+architecture. A proud Texan and fan of Python and DevOps.
 
 [Resume](Overholt-Resume.pdf)
 
