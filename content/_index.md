@@ -2,7 +2,7 @@
 title: "Kristopher Overholt"
 ---
 
-I am a senior sales engineer at [Coiled](https://coiled.io) who works with
+I am a Senior Sales Engineer at [Coiled](https://coiled.io) who works with
 distributed Python, scalable data science workflows, and enterprise
 architecture. A proud Texan and fan of Python and DevOps.
 
