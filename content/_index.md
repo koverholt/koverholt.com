@@ -8,7 +8,7 @@ architecture. A proud Texan and fan of Python and DevOps.
 
 [Resume](Overholt-Resume.pdf)
 
-[Github](https://github.com/koverholt)
+[GitHub](https://github.com/koverholt)
 
 [LinkedIn](http://www.linkedin.com/in/koverholt)
 
