@@ -2,9 +2,9 @@
 title: "Kristopher Overholt"
 ---
 
-I am the Director of Sales Engineering at [Coiled](https://coiled.io) and I work
-with distributed Python, scalable data science workflows, and enterprise
-architecture. I'm also a proud Texan and fan of Python and DevOps.
+I am a Developer Advocate at Google and I work with machine learning and scalable
+data science in Google Cloud. I'm also a proud Texan and fan of Python and
+DevOps.
 
 [Resume](Overholt-Resume.pdf)
 
