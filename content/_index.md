@@ -4,7 +4,7 @@ title: "Kristopher Overholt"
 
 I am a
 [Developer Advocate](https://cloud.google.com/developers/advocates/kristopher-overholt)
-at Google and I work with artificial intelligence and machine learning in
+at Google and I work with AI and machine learning in
 [Google Cloud](https://cloud.google.com/). I'm also a fan of Python and DevOps.
 
 [Resume](Overholt-Resume.pdf) |
