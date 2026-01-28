@@ -1,4 +1,4 @@
-baseurl = "https://www.koverholt.com/"
+baseurl = "https://koverholt.com/"
 languageCode = "en-us"
 title = "Kristopher Overholt"
 theme = "hugo-lithium"
