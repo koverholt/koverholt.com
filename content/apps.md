@@ -6,8 +6,4 @@ title: "Apps"
 
 [Texas Fire Map](https://www.istexasonfire.com)
 
-[Texas Prices](https://texas-prices.koverholt.com)
-
 [Name Popularity](https://names.koverholt.com)
-
-[Austin Fire Incidents](https://austin-fires.koverholt.com)
