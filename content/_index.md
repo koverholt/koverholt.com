@@ -9,5 +9,4 @@ at Google and I work with AI and machine learning in
 
 [Resume](Overholt-Resume.pdf) |
 [GitHub](https://github.com/koverholt) |
-[LinkedIn](http://www.linkedin.com/in/koverholt) |
-[Twitter](http://www.twitter.com/koverholt)
+[LinkedIn](http://www.linkedin.com/in/koverholt)

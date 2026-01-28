@@ -16,10 +16,6 @@ unsafe= true
     name = "GitHub"
     url = "https://github.com/koverholt"
     weight = 20
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/koverholt"
-    weight = 30
 
 [params]
     description = "Kristopher Overholt"
